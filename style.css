@@ -461,6 +461,10 @@ h5 {
   transition: all 0.5s ease;
   z-index: 2;
 }
+.p-btn--5 img {
+  object-fit: contain;
+  background-color: black;
+}
 /* skills section */
 .skills-section {
   text-align: center;
@@ -468,9 +472,6 @@ h5 {
   border-bottom: 1px solid #ccc;
 }
 .skill-section-more {
-  /* display: flex; */
-  /* display: grid;
-  grid-template-columns: 50% 50%; */
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -483,89 +484,124 @@ h5 {
 }
 .second-sec {
   flex-basis: 100%;
-  /* z-index: -100; */
 }
 
-.skill .skill-detail {
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 10px;
+.second-sec .skills {
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  /* transition: 0.5s; */
 }
-.skills-section .bar {
-  border: 2px solid #0d96e0;
-  border-radius: 20px;
+
+.skills .name {
+  position: relative;
+  width: 120px;
+  text-align: right;
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
 }
-.first-sec p {
-  margin-block: 20px;
+.skills .value {
+  /* width: 40px; */
+  text-align: left;
+  color: #222;
 }
-.bar div {
-  /* position: relative; */
-  width: 0;
-  height: 9px;
+.skills .percent {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 15px;
+  margin: 0 15px;
   border-radius: 10px;
-  background-color: #0d96e0;
+  border: 2px solid #0d96e0;
+  overflow: hidden;
 }
-.skill:not(:last-child) {
-  margin-bottom: 20px;
+.skills .percent .progress {
+  height: 100%;
+  border-radius: 10px;
+  background: #0d96e0;
 }
-/* anim */
-#html-bar {
-  animation: html-fill 2s forwards;
+
+#html {
+  animation: html 2s ease-in-out forwards;
 }
-@keyframes html-fill {
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
   100% {
-    width: 90%;
+    width: 60%;
   }
 }
-#css-bar {
-  animation: css-fill 2s forwards;
+
+#css {
+  animation: css 2s ease-in-out forwards;
 }
-@keyframes css-fill {
-  100% {
-    width: 70%;
+@keyframes css {
+  0% {
+    width: 0%;
   }
-}
-#js-bar {
-  animation: js-fill 2s forwards;
-}
-@keyframes js-fill {
   100% {
     width: 65%;
   }
 }
-
-#bootstrap-bar {
-  animation: bootstrap-fill 2s forwards;
+#javascript {
+  animation: js 2s ease-in-out forwards;
 }
-@keyframes bootstrap-fill {
+@keyframes js {
+  0% {
+    width: 0%;
+  }
   100% {
-    width: 80%;
+    width: 60%;
   }
 }
-#react-bar {
-  animation: react-fill 2s forwards;
+#bootstrap {
+  animation: bootstrap 2s ease-in-out forwards;
 }
-@keyframes react-fill {
-  100% {
-    width: 40%;
+@keyframes bootstrap {
+  0% {
+    width: 0%;
   }
-}
-#tailwind-bar {
-  animation: tailwind-fill 2s forwards;
-}
-@keyframes tailwind-fill {
-  100% {
-    width: 50%;
-  }
-}
-#android-bar {
-  animation: android-fill 2s forwards;
-}
-@keyframes android-fill {
   100% {
     width: 70%;
   }
 }
+#react {
+  animation: react 2s ease-in-out forwards;
+}
+@keyframes react {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+#java {
+  animation: java 2s ease-in-out forwards;
+}
+@keyframes java {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+#android {
+  animation: android 2s ease-in-out forwards;
+}
+@keyframes android {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
 /* ---------------- */
 
 /* timeline-section */
